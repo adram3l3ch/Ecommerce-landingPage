@@ -1,0 +1,28 @@
+.gallery,
+.gallery img {
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+.thumb + .thumb {
+	/* margin-left: 20px; */
+}
+
+.gallery__thumbs {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.thumb {
+	width: calc(100% / 4 - 20px);
+	position: relative;
+}
+
+.thumb::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: white;
+	z-index: 100000;
+}

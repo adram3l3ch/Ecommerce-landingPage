@@ -1,0 +1,14 @@
+.cartcounter {
+	display: flex;
+	width: 120px;
+	border-radius: 10px;
+	background-color: rgba(228, 228, 228, 0.349);
+	padding: 1em;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.increase,
+.decrease {
+	cursor: pointer;
+}
