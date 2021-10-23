@@ -1,7 +1,7 @@
 import React from "react";
 import CartCounter from "../cartCounter/CartCounter.jsx";
 import ImageGallery from "../imageGallery/ImageGallery";
-import cartIcon from "../../images/icon-cart.svg";
+import { ReactComponent as CartIcon } from "../../images/icon-cart.svg";
 
 import "./product.css";
 import { useGlobalContext } from "../../context.js";
@@ -36,7 +36,7 @@ const Product = () => {
 							})
 						}
 					>
-						<img src={cartIcon} alt="" />
+						<CartIcon />
 						<button>Add to cart</button>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Logo from "../../images/logo.svg";
 import cartIcon from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
@@ -14,7 +14,7 @@ const Navbar = () => {
 			<div className="navbar__left">
 				<img
 					src={hamBurger}
-					alt=""
+					alt="hamburger"
 					className="hamburger"
 					onClick={() => setIsSidebarVisible(true)}
 				/>

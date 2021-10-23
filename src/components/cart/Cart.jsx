@@ -13,7 +13,7 @@ const Cart = () => {
 				{cart.amount ? (
 					<>
 						<div className="cart__card">
-							<img src={image} alt="image" />
+							<img src={image} alt="shoe" />
 							<div className="cart__details">
 								<h3>Fall Limited Edition Sneakers</h3>
 								<div className="cart__card__price">
@@ -24,7 +24,7 @@ const Cart = () => {
 
 							<img
 								src={deleteIcon}
-								alt=""
+								alt="delete from cart"
 								className="delete"
 								onClick={() => setCart({ amount: 0, number: 0, visible: true })}
 							/>
