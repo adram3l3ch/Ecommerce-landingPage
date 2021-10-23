@@ -9,8 +9,9 @@
 	height: 60px;
 }
 
-.increase,
-.decrease {
+button {
+	background: none;
+	border: none;
 	cursor: pointer;
 }
 

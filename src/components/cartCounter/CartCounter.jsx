@@ -15,11 +15,15 @@ const CartCounter = () => {
 	return (
 		<div className="cartcounter">
 			<div className="decrease" onClick={() => updateCartValue(-1)}>
-				<img src={minus} alt="decrease" />
+				<button>
+					<img src={minus} alt="decrease" />
+				</button>
 			</div>
 			<h4 className="count">{cartValue}</h4>
 			<div className="increase" onClick={() => updateCartValue(1)}>
-				<img src={plus} alt="increase" />
+				<button>
+					<img src={plus} alt="increase" />
+				</button>
 			</div>
 		</div>
 	);
