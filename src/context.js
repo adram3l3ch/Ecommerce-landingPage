@@ -8,9 +8,19 @@ const ContextProvider = ({ children }) => {
 	const [cartValue, setCartValue] = useState(1);
 	const [cart, setCart] = useState({ amount: 0, number: 0, visible: false });
 	const [activeImage, setActiveImage] = useState(shoe1thumb);
+	const [imageIndex, setImageIndex] = useState(0);
 	return (
 		<AppContext.Provider
-			value={{ cartValue, setCartValue, cart, setCart, activeImage, setActiveImage }}
+			value={{
+				cartValue,
+				setCartValue,
+				cart,
+				setCart,
+				activeImage,
+				setActiveImage,
+				imageIndex,
+				setImageIndex,
+			}}
 		>
 			{children}
 		</AppContext.Provider>
