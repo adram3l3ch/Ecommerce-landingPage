@@ -16,13 +16,19 @@
 
 .thumb {
 	width: calc(100% / 4 - 20px);
+	aspect-ratio: 1;
 	position: relative;
+	object-fit: contain;
+	cursor: pointer;
 }
 
-.thumb::before {
+.thumb:hover::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.466);
 	z-index: 100000;
+	border: 3px solid orange;
+	border-radius: 10px;
+	pointer-events: none;
 }

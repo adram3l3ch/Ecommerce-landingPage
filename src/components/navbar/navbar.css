@@ -15,11 +15,11 @@
 }
 
 .navbar__left {
-	flex: 0.5;
+	width: 600px;
 }
 
 .navbar__right {
-	width: 100px;
+	width: 120px;
 }
 
 .navbar__links {
@@ -31,6 +31,7 @@
 	padding: 0 0.75em;
 	cursor: pointer;
 	color: gray;
+	position: relative;
 }
 .navbar__cart {
 	position: relative;
@@ -39,26 +40,24 @@
 .navbar__cart img {
 	cursor: pointer;
 }
-.navbar__links li:hover {
-	color: black;
-}
-
+.navbar__links li:hover,
 .navbar__links li.active {
 	color: black;
 }
 
-.navbar::after {
+.navbar__links li.active::after {
 	content: "";
 	position: absolute;
-	left: 20px;
-	right: 600px;
-	bottom: 0;
+	top: 54px;
+	left: 0;
+	right: 0;
 	height: 5px;
 	background-color: orange;
+	border-radius: 5px;
 }
 
 .avatar {
-	width: 40px;
+	width: 50px;
 	border: 3px solid orange;
 	border-radius: 50%;
 }
