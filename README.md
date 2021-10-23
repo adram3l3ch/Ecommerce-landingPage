@@ -20,7 +20,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Github](https://github.com/adram3l3ch/Ecommerce-landingPage)
--   Live Site URL: [Netlify](https://adramelech-ecommerce-landingpage/)
+-   Live Site URL: [Netlify](https://adramelech-ecommerce-landingpage.netlify.app/)
 
 ## My process
 
