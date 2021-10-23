@@ -85,6 +85,10 @@
 	cursor: inherit;
 }
 
+.addtocart:hover {
+	opacity: 0.75;
+}
+
 @media (max-width: 1300px) {
 	.product {
 		padding: 0;

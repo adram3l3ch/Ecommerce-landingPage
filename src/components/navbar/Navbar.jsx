@@ -10,8 +10,8 @@ import { useGlobalContext } from "../../context";
 const Navbar = () => {
 	const { cart, setCart, setIsSidebarVisible } = useGlobalContext();
 	return (
-		<div className="navbar">
-			<div className="navbar__left">
+		<header className="navbar">
+			<nav className="navbar__left">
 				<img
 					src={hamBurger}
 					alt="hamburger"
@@ -26,7 +26,7 @@ const Navbar = () => {
 					<li>About</li>
 					<li>Contact</li>
 				</ul>
-			</div>
+			</nav>
 			<div className="navbar__right">
 				<div className="navbar__cart">
 					<p>{cart.number}</p>
@@ -41,7 +41,7 @@ const Navbar = () => {
 				{cart.visible && <Cart />}
 				<img src={avatar} alt="avatar" className="avatar" />
 			</div>
-		</div>
+		</header>
 	);
 };
 

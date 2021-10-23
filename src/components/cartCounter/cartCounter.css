@@ -14,6 +14,11 @@
 	cursor: pointer;
 }
 
+.increase:hover,
+.decrease:hover {
+	opacity: 0.75;
+}
+
 .decrease {
 	transform: translateY(-15%);
 }

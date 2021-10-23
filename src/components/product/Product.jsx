@@ -9,11 +9,11 @@ import { useGlobalContext } from "../../context.js";
 const Product = () => {
 	const { cart, setCart, cartValue } = useGlobalContext();
 	return (
-		<div className="product">
+		<main className="product">
 			<div className="product__left">
 				<ImageGallery />
 			</div>
-			<div className="product__right">
+			<section className="product__right">
 				<h3 className="product__subtitle">SNEAKER COMPANY</h3>
 				<h1 className="product__title">Fall Limited Edition Sneakers</h1>
 				<p className="product__details">
@@ -40,8 +40,8 @@ const Product = () => {
 						<button>Add to cart</button>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 	);
 };
 
