@@ -10,11 +10,12 @@
 }
 
 .mainGallery {
-	width: 30%;
+	width: 50%;
+	max-width: 400px;
 	border-radius: 10px;
 }
 
-img {
+.mainGallery img {
 	max-width: 100%;
 	border-radius: 10px;
 }
@@ -39,7 +40,7 @@ img {
 	inset: 0;
 	background-color: rgba(255, 255, 255, 0.466);
 	z-index: 2;
-	border: 3px solid orange;
+	border: 3px solid var(--primary-500);
 	border-radius: 10px;
 	pointer-events: none;
 }
@@ -48,13 +49,14 @@ img {
 	position: relative;
 }
 
-.arrow {
+.mainGallery .arrow,
+.mainGallery .close {
 	position: absolute;
 	top: 50%;
 	background-color: white;
-	padding: 20px;
-	width: 55px;
-	height: 56px;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	z-index: 4;
 	cursor: pointer;
@@ -65,4 +67,12 @@ img {
 }
 .right {
 	transform: translate(-50%, -50%);
+}
+
+.mainGallery .close {
+	top: -50px;
+	right: 0;
+	padding: 10px;
+	width: 30px;
+	height: 30px;
 }

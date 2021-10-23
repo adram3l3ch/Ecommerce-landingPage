@@ -1,0 +1,33 @@
+.sidebar {
+	position: absolute;
+	inset: 0 20% 0 0;
+	z-index: 5;
+	background-color: white;
+	padding: 40px;
+	display: none;
+}
+
+.sidebar ul {
+	list-style: none;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.sidebar ul li {
+	margin-top: 40px;
+}
+
+.close {
+	width: 20px;
+}
+
+@media (max-width: 800px) {
+	.sidebar {
+		display: block;
+		transform: translateX(-100%);
+		transition: transform 0.2s ease-in-out;
+	}
+	.sidebar.active {
+		transform: translateX(0);
+	}
+}

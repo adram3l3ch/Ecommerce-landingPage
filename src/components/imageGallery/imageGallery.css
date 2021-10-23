@@ -2,10 +2,7 @@
 .gallery img {
 	max-width: 100%;
 	border-radius: 10px;
-}
-
-.thumb + .thumb {
-	/* margin-left: 20px; */
+	cursor: pointer;
 }
 
 .gallery__thumbs {
@@ -28,7 +25,7 @@
 	inset: 0;
 	background-color: rgba(255, 255, 255, 0.466);
 	z-index: 2;
-	border: 3px solid orange;
+	border: 3px solid var(--primary-500);
 	border-radius: 10px;
 	pointer-events: none;
 }

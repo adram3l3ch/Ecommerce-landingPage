@@ -4,13 +4,20 @@ import cartIcon from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
 import "./navbar.css";
 import Cart from "../cart/Cart";
+import hamBurger from "../../images/icon-menu.svg";
 import { useGlobalContext } from "../../context";
 
 const Navbar = () => {
-	const { cart, setCart } = useGlobalContext();
+	const { cart, setCart, setIsSidebarVisible } = useGlobalContext();
 	return (
 		<div className="navbar">
 			<div className="navbar__left">
+				<img
+					src={hamBurger}
+					alt=""
+					className="hamburger"
+					onClick={() => setIsSidebarVisible(true)}
+				/>
 				<img src={Logo} alt="logo" />
 				<ul className="navbar__links">
 					<li>Collections</li>
@@ -30,8 +37,8 @@ const Navbar = () => {
 							setCart(prevstate => ({ ...prevstate, visible: !prevstate.visible }))
 						}
 					/>
-					{cart.visible && <Cart />}
 				</div>
+				{cart.visible && <Cart />}
 				<img src={avatar} alt="avatar" className="avatar" />
 			</div>
 		</div>

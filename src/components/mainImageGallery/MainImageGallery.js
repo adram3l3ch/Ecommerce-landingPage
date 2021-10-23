@@ -1,22 +1,15 @@
 import React from "react";
 import "./mainImageGallery.css";
 
-import shoe1thumb from "../../images/image-product-1-thumbnail.jpg";
-import shoe2thumb from "../../images/image-product-2-thumbnail.jpg";
-import shoe3thumb from "../../images/image-product-3-thumbnail.jpg";
-import shoe4thumb from "../../images/image-product-4-thumbnail.jpg";
-import shoe1 from "../../images/image-product-1.jpg";
-import shoe2 from "../../images/image-product-2.jpg";
-import shoe3 from "../../images/image-product-3.jpg";
-import shoe4 from "../../images/image-product-4.jpg";
 import leftArrow from "../../images/icon-previous.svg";
 import rightArrow from "../../images/icon-next.svg";
+import close from "../../images/icon-close.svg";
 import { useGlobalContext } from "../../context";
 
-const IMAGES = [shoe1, shoe2, shoe3, shoe4];
+import { IMAGES, THUMBS } from "../../images";
 
 const MainImageGallery = () => {
-	const { imageIndex, setImageIndex } = useGlobalContext();
+	const { imageIndex, setImageIndex, setIsMainGalleryVisible } = useGlobalContext();
 
 	const updateImageIndex = value => {
 		if (imageIndex + value < 0) return setImageIndex(3);
@@ -34,6 +27,12 @@ const MainImageGallery = () => {
 						className="arrow left"
 						onClick={() => updateImageIndex(-1)}
 					/>
+					<img
+						src={close}
+						alt=""
+						onClick={() => setIsMainGalleryVisible(false)}
+						className="close"
+					/>
 					<img src={IMAGES[imageIndex]} alt="" className="main" />
 					<img
 						src={rightArrow}
@@ -44,16 +43,16 @@ const MainImageGallery = () => {
 				</div>
 				<div className="mainGallery__thumbs">
 					<div className="thumb">
-						<img src={shoe1thumb} alt="" onClick={() => setImageIndex(0)} />
+						<img src={THUMBS[0]} alt="" onClick={() => setImageIndex(0)} />
 					</div>
 					<div className="thumb">
-						<img src={shoe2thumb} alt="" onClick={() => setImageIndex(1)} />
+						<img src={THUMBS[1]} alt="" onClick={() => setImageIndex(1)} />
 					</div>
 					<div className="thumb">
-						<img src={shoe3thumb} alt="" onClick={() => setImageIndex(2)} />
+						<img src={THUMBS[2]} alt="" onClick={() => setImageIndex(2)} />
 					</div>
 					<div className="thumb">
-						<img src={shoe4thumb} alt="" onClick={() => setImageIndex(3)} />
+						<img src={THUMBS[3]} alt="" onClick={() => setImageIndex(3)} />
 					</div>
 				</div>
 			</div>

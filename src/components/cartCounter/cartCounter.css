@@ -1,14 +1,19 @@
 .cartcounter {
 	display: flex;
-	width: 120px;
+	width: 150px;
 	border-radius: 10px;
-	background-color: rgba(228, 228, 228, 0.349);
-	padding: 1em;
+	background-color: var(--neutral-200);
+	padding: 1em 1.5em;
 	justify-content: space-between;
 	align-items: center;
+	height: 60px;
 }
 
 .increase,
 .decrease {
 	cursor: pointer;
+}
+
+.decrease {
+	transform: translateY(-15%);
 }

@@ -1,32 +1,30 @@
-import shoe1thumb from "../../images/image-product-1-thumbnail.jpg";
-import shoe2thumb from "../../images/image-product-2-thumbnail.jpg";
-import shoe3thumb from "../../images/image-product-3-thumbnail.jpg";
-import shoe4thumb from "../../images/image-product-4-thumbnail.jpg";
-import shoe1 from "../../images/image-product-1.jpg";
-import shoe2 from "../../images/image-product-2.jpg";
-import shoe3 from "../../images/image-product-3.jpg";
-import shoe4 from "../../images/image-product-4.jpg";
+import { IMAGES, THUMBS } from "../../images";
 
 import "./imageGallery.css";
 import { useGlobalContext } from "../../context";
 
 const ImageGallery = () => {
-	const { activeImage, setActiveImage } = useGlobalContext();
+	const { activeImage, setActiveImage, setIsMainGalleryVisible } = useGlobalContext();
 	return (
 		<div className="gallery">
-			<img src={activeImage} alt="" className="main" />
+			<img
+				src={IMAGES[activeImage]}
+				alt=""
+				className="main"
+				onClick={() => setIsMainGalleryVisible(true)}
+			/>
 			<div className="gallery__thumbs">
 				<div className="thumb">
-					<img src={shoe1thumb} alt="" onClick={() => setActiveImage(shoe1)} />
+					<img src={THUMBS[0]} alt="" onClick={() => setActiveImage(0)} />
 				</div>
 				<div className="thumb">
-					<img src={shoe2thumb} alt="" onClick={() => setActiveImage(shoe2)} />
+					<img src={THUMBS[1]} alt="" onClick={() => setActiveImage(1)} />
 				</div>
 				<div className="thumb">
-					<img src={shoe3thumb} alt="" onClick={() => setActiveImage(shoe3)} />
+					<img src={THUMBS[2]} alt="" onClick={() => setActiveImage(2)} />
 				</div>
 				<div className="thumb">
-					<img src={shoe4thumb} alt="" onClick={() => setActiveImage(shoe4)} />
+					<img src={THUMBS[3]} alt="" onClick={() => setActiveImage(3)} />
 				</div>
 			</div>
 		</div>

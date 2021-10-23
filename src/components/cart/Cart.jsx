@@ -25,6 +25,7 @@ const Cart = () => {
 							<img
 								src={deleteIcon}
 								alt=""
+								className="delete"
 								onClick={() => setCart({ amount: 0, number: 0, visible: true })}
 							/>
 						</div>

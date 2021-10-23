@@ -6,6 +6,16 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+:root {
+	--primary-200: hsl(25, 100%, 94%);
+	--primary-500: hsl(26, 100%, 55%);
+	--neutral-200: hsl(223, 64%, 98%);
+	--neutral-400: hsl(220, 14%, 75%);
+	--neutral-600: hsl(219, 9%, 45%);
+	--neutral-700: hsl(220, 13%, 13%);
 }
 
 body {
@@ -13,4 +23,20 @@ body {
 	font-family: "Kumbh Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	user-select: none;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	max-width: 1400px;
+}
+
+@media (max-width: 1300px) {
+	.container {
+		width: 90%;
+	}
 }

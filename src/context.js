@@ -1,14 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
-import shoe1thumb from "./images/image-product-1.jpg";
-
 const AppContext = createContext();
 
 const ContextProvider = ({ children }) => {
 	const [cartValue, setCartValue] = useState(1);
 	const [cart, setCart] = useState({ amount: 0, number: 0, visible: false });
-	const [activeImage, setActiveImage] = useState(shoe1thumb);
+	const [activeImage, setActiveImage] = useState(0);
 	const [imageIndex, setImageIndex] = useState(0);
+	const [isMainGalleryVisible, setIsMainGalleryVisible] = useState(false);
+	const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 	return (
 		<AppContext.Provider
 			value={{
@@ -20,6 +20,10 @@ const ContextProvider = ({ children }) => {
 				setActiveImage,
 				imageIndex,
 				setImageIndex,
+				isMainGalleryVisible,
+				setIsMainGalleryVisible,
+				isSidebarVisible,
+				setIsSidebarVisible,
 			}}
 		>
 			{children}
